@@ -1,6 +1,7 @@
 import React from "react";
+import { Feather } from "@expo/vector-icons";
 
-import { View, Image, Text } from "react-native";
+import { View, Image, Text, TouchableOpacity } from "react-native";
 
 import logoImg from "../../assets/logo.png";
 
@@ -19,6 +20,39 @@ export default function Incidents() {
       <Text style={styles.description}>
         Escolha um dos casos abaixo e salve o dia.
       </Text>
+
+      <View style={styles.incidentList}>
+        <View styles={styles.incident}>
+          <Text style={styles.incidentProperty}>ONG:</Text>
+          <Text style={styles.incidentValue}>APAD</Text>
+
+          <Text style={styles.incidentProperty}>CASO:</Text>
+          <Text style={styles.incidentValue}>Cadelinha atropelada</Text>
+
+          <Text style={styles.incidentProperty}>VALOR:</Text>
+          <Text style={styles.incidentValue}>R$ 120,00</Text>
+
+          <TouchableOpacity style={styles.DetailsButton} onPress={() => {}}>
+            <Text styles={styles.detailsButtonText}>Ver mais detalhes</Text>
+            <Feather name="arrow-right" size={16} color="#e02041" />
+          </TouchableOpacity>
+        </View>
+        <View styles={styles.incident}>
+          <Text style={styles.incidentProperty}>ONG:</Text>
+          <Text style={styles.incidentValue}>APAD</Text>
+
+          <Text style={styles.incidentProperty}>CASO:</Text>
+          <Text style={styles.incidentValue}>Cadelinha atropelada</Text>
+
+          <Text style={styles.incidentProperty}>VALOR:</Text>
+          <Text style={styles.incidentValue}>R$ 120,00</Text>
+
+          <TouchableOpacity style={styles.DetailsButton} onPress={() => {}}>
+            <Text styles={styles.detailsButtonText}>Ver mais detalhes</Text>
+            <Feather name="arrow-right" size={16} color="#e02041" />
+          </TouchableOpacity>
+        </View>
+      </View>
     </View>
   );
 }
