@@ -1,6 +1,7 @@
-import express from "express";
-import cors from "cors";
-import routes from "./routes";
+const express = require("express");
+const cors = require("cors");
+const { errors } = require("celebrate");
+const routes = require("./routes");
 
 class App {
   constructor() {
@@ -17,7 +18,8 @@ class App {
 
   routes() {
     this.server.use(routes);
+    this.server.use(errors());
   }
 }
 
-export default new App().server;
+module.exports = new App().server;

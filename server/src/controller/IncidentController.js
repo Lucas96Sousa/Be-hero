@@ -1,4 +1,4 @@
-import connection from "../database/connection";
+const connection = require("../database/connection");
 
 class IncidentController {
   async index(req, res) {
@@ -16,7 +16,7 @@ class IncidentController {
         "ongs.email",
         "ongs.whatsapp",
         "ongs.city",
-        "ongs.uf"
+        "ongs.uf",
       ]);
 
     res.header("X-Total-Count", count["count(*)"]);
@@ -33,7 +33,7 @@ class IncidentController {
       title,
       description,
       value,
-      ong_id
+      ong_id,
     });
 
     return res.json({ id });
@@ -60,4 +60,4 @@ class IncidentController {
   }
 }
 
-export default new IncidentController();
+module.exports = new IncidentController();
