@@ -12,7 +12,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3"
   },
-  "homepage": "https://lucas96sousa.github.io/be-hero",
+  "homepage": "https://lucas96sousa.github.io/Be-hero",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
